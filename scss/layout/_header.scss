@@ -1,0 +1,124 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m; // Importamos el mixin para usarlo aquí
+
+header {
+  background-color: v.$color-fondo-claro;
+
+  .index-header-superior {
+    padding: 1rem 1.5rem;
+    border-bottom: 0.2px solid #808080;
+    background-color: transparent !important;
+
+    // Uso del Mixin para Desktop (1024px)
+    @include m.responder(desktop) {
+      padding: 1.5rem 10%;
+    }
+
+    .logo {
+      color: v.$color-primario !important;
+      font-family: v.$font-titulos;
+      font-weight: bold;
+      font-size: 1.5rem;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .nav-item {
+      padding: 0.8rem 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      
+      &:last-child { border-bottom: none; }
+
+      // Uso del Mixin para Tablet (768px)
+      @include m.responder(tablet) {
+        padding: 0;
+        border-bottom: none;
+      }
+    }
+
+    .nav-link {
+      font-family: v.$font-texto;
+      font-weight: 500;
+      color: v.$color-oscuro !important;
+      font-size: 1.1rem;
+    }
+  }
+
+  .index-header-inferior {
+    display: flex;
+    padding: 3rem 1.5rem;
+    flex-direction: column;
+    min-height: 80vh;
+    justify-content: center;
+
+    // Responsive Tablet
+    @include m.responder(tablet) {
+      flex-direction: row;
+      align-items: center;
+      gap: 50px;
+      padding: 4rem 5%;
+    }
+
+    // Responsive Desktop
+    @include m.responder(desktop) {
+      padding: 4rem 10%;
+    }
+
+    .index-header-inicio {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 10px;
+      flex-direction: column;
+    }
+
+    .index-header-botones {
+      display: flex;
+      gap: 15px;
+    }
+
+    .index-header-fotos {
+      margin-top: 3rem;
+      position: relative;
+      
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: v.$border-radius-lg;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+
+        @include m.responder(desktop) {
+          max-width: 500px;
+          display: block;
+          margin-left: auto;
+        }
+      }
+    }
+  }
+}
+
+// Badge con Mixin para animaciones (Opcional pero suma puntos)
+.badge-custom {
+  position: absolute;
+  bottom: -10px;
+  right: -5px;
+  background-color: v.$color-primario;
+  color: v.$color-blanco;
+  padding: 15px 20px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+
+  .badge-numero {
+    font-size: 1.8rem;
+    font-weight: bold;
+    display: block;
+  }
+
+  .badge-texto {
+    font-size: 0.6rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+}

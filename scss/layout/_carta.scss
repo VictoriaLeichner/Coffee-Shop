@@ -1,0 +1,113 @@
+@use '../abstracts/variables' as v;
+
+.carta-main {
+  padding: 3rem 1.5rem;
+  background-color: v.$color-fondo-main; // El fondo que usaste en el index
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+
+  @media screen and (min-width: 768px) {
+    padding: 5rem 10%;
+  }
+
+  // Sección de introducción
+  section:first-child {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+
+    h2 {
+      margin-top: 0.5rem;
+    }
+    
+    p {
+      margin: 0 auto;
+    }
+  }
+
+  .section-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+    @media screen and (min-width: 1024px) {
+      flex-direction: row; // En pantallas grandes, una tabla al lado de la otra
+      align-items: flex-start;
+    }
+
+    div {
+      flex: 1;
+    }
+  }
+
+  .carta-titulo {
+    font-family: v.$font-titulos;
+    color: v.$color-primario;
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 10px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50px;
+      height: 2px;
+      background-color: v.$color-secundario;
+    }
+
+    @media screen and (min-width: 768px) {
+      text-align: left;
+      &::after {
+        left: 0;
+        transform: none;
+      }
+    }
+  }
+
+  // Estilización de la Tabla
+  .table {
+    --bs-table-bg: transparent; // Quitamos el blanco de Bootstrap
+    margin-bottom: 0;
+    
+    thead th {
+      font-family: v.$font-texto;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      letter-spacing: 1.5px;
+      color: v.$color-secundario;
+      border-bottom: 2px solid v.$color-primario;
+      padding-bottom: 1rem;
+    }
+
+    tbody td {
+      padding: 1.2rem 0.5rem;
+      vertical-align: middle;
+      font-family: v.$font-texto;
+      color: v.$color-oscuro;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+
+      &:first-child {
+        font-weight: 600; // Nombre de la bebida destacado
+      }
+
+      &:last-child {
+        font-weight: bold;
+        color: v.$color-primario; // Precio destacado
+        text-align: right;
+      }
+    }
+
+    // Pequeño efecto al pasar el mouse por la fila
+    tbody tr {
+      transition: background-color 0.3s ease;
+      &:hover {
+        background-color: rgba(v.$color-primario, 0.03);
+      }
+    }
+  }
+}
