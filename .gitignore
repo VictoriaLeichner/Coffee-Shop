@@ -1,0 +1,25 @@
+# --- OS Metadata ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Editor/IDE ---
+.vscode/
+.idea/
+*.swp
+*.sublime-project
+
+# --- Sass/CSS ---
+.sass-cache/
+*.css.map
+*.scss.map
+
+# --- Logs ---
+*.log
+npm-debug.log*
+
+# --- Environment ---
+.env
+
+# --- OneDrive/Temporary ---
+$RECYCLE.BIN/
