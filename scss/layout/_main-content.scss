@@ -1,6 +1,6 @@
 @use '../abstracts/variables' as v;
 
-main {
+.index-main {
   background-color: v.$color-fondo-main;
   display: flex;
   padding: 3rem 1.5rem;

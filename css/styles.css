@@ -236,14 +236,14 @@ header .index-header-inferior .index-header-fotos img {
   text-transform: uppercase;
 }
 
-main {
+.index-main {
   background-color: #f5ede4;
   display: flex;
   padding: 3rem 1.5rem;
   flex-direction: column;
 }
 @media screen and (min-width: 768px) {
-  main {
+  .index-main {
     flex-direction: row;
     align-items: flex-start;
     padding: 5rem 5%;
@@ -251,43 +251,43 @@ main {
   }
 }
 @media screen and (min-width: 1024px) {
-  main {
+  .index-main {
     padding: 6rem 10%;
   }
 }
-main .index-main-fotos {
+.index-main .index-main-fotos {
   margin-bottom: 2rem;
   display: flex;
   gap: 10px;
   flex-direction: column;
 }
-main .index-main-fotos img {
+.index-main .index-main-fotos img {
   width: 100%;
   height: auto;
   max-width: 500px;
   border-radius: 15px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
 }
-main .img-interior-cafeteria {
+.index-main .img-interior-cafeteria {
   display: none;
 }
 @media screen and (min-width: 768px) {
-  main .img-interior-cafeteria {
+  .index-main .img-interior-cafeteria {
     display: block;
     margin-top: -50px;
     margin-left: 30px;
   }
 }
-main .index-main-historia {
+.index-main .index-main-historia {
   display: flex;
   gap: 12px;
   flex-direction: column;
 }
-main article {
+.index-main article {
   border-left: 3px solid #8b5a2b;
   padding-left: 1rem;
 }
-main article p {
+.index-main article p {
   font-size: 1rem;
 }
 
@@ -435,6 +435,73 @@ main article p {
 }
 .carta-main .table tbody tr:hover {
   background-color: rgba(139, 90, 43, 0.03);
+}
+
+.reserva-main {
+  background-color: #f5ede4;
+  display: flex;
+  padding: 3rem 1.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.reserva-hero {
+  text-align: center;
+  max-width: 800px;
+}
+
+.reserva-section {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 3rem;
+}
+@media screen and (min-width: 768px) {
+  .reserva-section {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 60px;
+  }
+}
+
+.reserva-imagen img {
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+  border-radius: 15px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+.reserva-formulario {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+.reserva-formulario form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.reserva-formulario form label {
+  font-family: "Inter", -apple-system, sans-serif;
+  font-size: 1rem;
+  color: #6b6b6b;
+}
+.reserva-formulario form input, .reserva-formulario form select, .reserva-formulario form textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: "Inter", -apple-system, sans-serif;
+  font-size: 1rem;
+}
+.reserva-formulario form input:focus, .reserva-formulario form select:focus, .reserva-formulario form textarea:focus {
+  outline: none;
+  border-color: #8b5a2b;
+  box-shadow: 0 0 5px rgba(139, 90, 43, 0.5);
+  transition: all 0.3s ease;
 }
 
 footer {

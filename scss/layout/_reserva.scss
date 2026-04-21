@@ -1,0 +1,73 @@
+@use '../abstracts/variables' as v;
+
+.reserva-main {
+    background-color: v.$color-fondo-main;
+    display: flex;
+  padding: 3rem 1.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.reserva-hero {
+  text-align: center;
+  max-width: 800px;
+}
+
+.reserva-section {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 3rem;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 60px;
+  }
+}
+
+.reserva-imagen {
+  img {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    border-radius: v.$border-radius-lg;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+  }
+}
+
+.reserva-formulario {
+  background-color: v.$color-blanco;
+  padding: 2rem;
+  border-radius: v.$border-radius-lg;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    label {
+      font-family: v.$font-texto;
+      font-size: 1rem;
+      color: v.$color-texto;
+    }
+
+    input, select, textarea {
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: v.$border-radius-sm;
+      font-family: v.$font-texto;
+      font-size: 1rem;
+
+      &:focus {
+        outline: none;
+        border-color: v.$color-primario;
+        box-shadow: 0 0 5px rgba(139, 90, 43, 0.5);
+        transition: v.$transition-base;
+      }
+    }
+}
+}
