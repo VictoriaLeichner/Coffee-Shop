@@ -1,0 +1,18 @@
+// 1. Abstracts (Herramientas: variables, mixins)
+@use 'abstracts/variables';
+@use 'abstracts/mixins';
+
+// 2. Base (Reset, tipografía global y selectores básicos)
+@use 'base/base';
+
+// 3. Components (Elementos pequeños y reutilizables)
+@use 'components/buttons';
+@use 'components/cards';
+
+// 4. Layout (Secciones grandes de las páginas)
+@use 'layout/header';
+@use 'layout/main-content'; // Estilos del main de la Home (Index)
+@use 'layout/preparacion';  // Estilos del main de la página Preparación
+@use 'layout/carta';
+@use 'layout/reserva';   // Estilos del main de la página Reserva
+@use 'layout/footer';

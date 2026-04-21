@@ -1,0 +1,61 @@
+@use '../abstracts/variables' as v;
+
+.index-main {
+  background-color: v.$color-fondo-main;
+  display: flex;
+  padding: 3rem 1.5rem;
+  flex-direction: column;
+
+  // Responsive para el contenedor main
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 5rem 5%;
+    gap: 60px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    padding: 6rem 10%;
+  }
+
+  .index-main-fotos {
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+
+    img {
+      width: 100%;
+      height: auto;
+      max-width: 500px;
+      border-radius: v.$border-radius-lg;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+    }
+  }
+
+  .img-interior-cafeteria { 
+    display: none; 
+
+    // Aparece solo en tablets y desktop
+    @media screen and (min-width: 768px) {
+      display: block;
+      margin-top: -50px;
+      margin-left: 30px;
+    }
+  }
+
+  .index-main-historia {
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
+  }
+
+  article {
+    border-left: 3px solid v.$color-primario;
+    padding-left: 1rem;
+    
+    p { 
+      font-size: 1rem; 
+    }
+  }
+}

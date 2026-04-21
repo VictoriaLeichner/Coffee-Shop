@@ -1,0 +1,64 @@
+@use '../abstracts/variables' as v;
+
+// 1. Reset Global
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// 2. Estilos de Etiquetas (Base)
+h1 {
+  font-weight: 600;
+  line-height: 1.1;
+  font-family: v.$font-titulos;
+  font-size: 3rem;
+  color: v.$color-oscuro;
+  margin-bottom: 1rem;
+
+  // Ajuste de tamaño para tablets y desktop
+  @media screen and (min-width: 768px) {
+    font-size: 4rem;
+  }
+}
+
+h2, h3 {
+  font-weight: 600;
+  line-height: 1.1;
+  font-family: v.$font-titulos;
+  color: v.$color-oscuro;
+  margin-bottom: 1rem;
+}
+
+h2 { 
+  font-size: 2rem; 
+}
+
+h3 { 
+  font-size: 1.25rem; 
+}
+
+h4 {
+  color: v.$color-secundario;
+  text-transform: uppercase;
+  font-family: v.$font-texto;
+  letter-spacing: 3px;
+  font-size: 0.85rem;
+  margin-bottom: 0.8rem;
+}
+
+p {
+  font-family: v.$font-texto;
+  font-size: 1.1rem;
+  max-width: 500px;
+  color: v.$color-texto;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+// Estilos base para imágenes dentro de contenedores
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}

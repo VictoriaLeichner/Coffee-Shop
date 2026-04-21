@@ -1,0 +1,17 @@
+// --- TIPOGRAFÍAS ---
+$font-titulos: "Playfair Display", Georgia, serif;
+$font-texto: "Inter", -apple-system, sans-serif;
+
+// --- COLORES ---
+$color-primario: #8b5a2b;    // Tu marrón principal (logo, botones, badge)
+$color-secundario: #ad7048;  // El color de los h4 y números de cards
+$color-oscuro: #2c1810;      // El color de los h1, h2 y fondo del footer
+$color-texto: #6b6b6b;      // El gris de tus párrafos
+$color-fondo-claro: #fdf8f3; // El crema del header
+$color-fondo-main: #f5ede4;  // El beige del main
+$color-blanco: #ffffff;
+
+// --- ESTRUCTURA ---
+$border-radius-lg: 15px;
+$border-radius-sm: 5px;
+$transition-base: all 0.3s ease;

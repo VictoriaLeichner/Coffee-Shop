@@ -1,0 +1,51 @@
+@use '../abstracts/variables' as v;
+
+.nosotros-main {
+  // Estilos para el contenedor principal de la página de preparación
+  padding: 3rem 1.5rem;
+  background-color: v.$color-fondo-main;
+
+  @media screen and (min-width: 768px) {
+    padding: 5rem 5%;
+    flex-direction: column;
+  }
+}
+
+.nosotros-texto {
+  margin-bottom: 3rem;
+  text-align: center;
+  width: 100%;
+
+  p {
+    margin-left: auto;
+    margin-right: auto; // Centra el párrafo si tiene max-width
+  }
+}
+
+.nosotros-seccion {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: v.$border-radius-lg;
+  }
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+
+    iframe {
+      flex: 1;
+      height: 450px;
+    }
+
+    .cards-preparacion {
+      flex: 1;
+    }
+  }
+}
