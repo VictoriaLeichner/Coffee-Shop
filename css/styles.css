@@ -58,6 +58,11 @@ img {
   height: auto;
 }
 
+ol, ul {
+  list-style: none;
+  padding: 0;
+}
+
 .boton-marron {
   background-color: #8b5a2b;
   color: #ffffff;
@@ -502,6 +507,27 @@ header .index-header-inferior .index-header-fotos img {
   border-color: #8b5a2b;
   box-shadow: 0 0 5px rgba(139, 90, 43, 0.5);
   transition: all 0.3s ease;
+}
+
+.ubicacion {
+  background-color: #f5ede4;
+  display: flex;
+  padding: 3rem 1.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+@media screen and (min-width: 768px) {
+  .ubicacion {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 5rem 5%;
+    gap: 60px;
+  }
+}
+.ubicacion .texto-ubicacion {
+  margin-bottom: 0rem;
 }
 
 footer {

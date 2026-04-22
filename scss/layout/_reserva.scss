@@ -71,3 +71,24 @@
     }
 }
 }
+
+.ubicacion {
+background-color: #f5ede4;
+  display: flex;
+  padding: 3rem 1.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+
+    @media screen and (min-width: 768px) {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 5rem 5%;
+    gap: 60px;
+  }
+
+  .texto-ubicacion {
+    margin-bottom: 0rem;
+  }
+}
