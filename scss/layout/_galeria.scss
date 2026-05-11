@@ -1,0 +1,67 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+.galeria-main {
+    background-color: v.$color-fondo-main;
+    @include m.seccion-estandar; // Reemplaza padding móvil y tablet/desktop de forma global
+
+    .galeria-intro {
+        @include m.intro-centrada; // Controla alineación, max-width, márgenes y el centrado del párrafo
+    }
+
+    .galeria-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); // Mobile first
+        grid-auto-rows: 150px;
+        gap: 15px;
+        grid-auto-flow: dense; 
+
+        @include m.responder(tablet) {
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            grid-auto-rows: 200px;
+            gap: 25px;
+        }
+
+        .galeria-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: v.$border-radius-lg;
+            box-shadow: v.$sombra-suave; // Reemplaza el hardcodeo por tu variable estructural
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.5s ease; // Mantenemos 0.5s para un zoom más suave en la foto
+            }
+
+            &--wide {
+                grid-column: span 2;
+            }
+
+            &--tall {
+                grid-row: span 2;
+            }
+
+            @media (hover: hover) {
+                &:hover img {
+                    transform: scale(1.1);
+                }
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 0; 
+                    left: 0; 
+                    width: 100%; 
+                    height: 100%;
+                    background-color: rgba(v.$color-oscuro, 0.2);
+                    opacity: 0;
+                    transition: v.$transition-base; // Usamos tu variable de transición global para la opacidad
+                }
+                &:hover::after {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

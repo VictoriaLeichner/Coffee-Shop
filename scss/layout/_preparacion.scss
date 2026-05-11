@@ -1,51 +1,43 @@
 @use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
 
 .nosotros-main {
-  // Estilos para el contenedor principal de la página de preparación
-  padding: 3rem 1.5rem;
-  background-color: v.$color-fondo-main;
-
-  @media screen and (min-width: 768px) {
-    padding: 5rem 5%;
+    background-color: v.$color-fondo-main;
+    @include m.seccion-estandar; // Unifica paddings y responsive del contenedor
+    display: flex;
     flex-direction: column;
-  }
 }
 
 .nosotros-texto {
-  margin-bottom: 3rem;
-  text-align: center;
-  width: 100%;
-
-  p {
-    margin-left: auto;
-    margin-right: auto; // Centra el párrafo si tiene max-width
-  }
+    @include m.intro-centrada; // Centra h4, h2 y p con el max-width de 700px
 }
 
 .nosotros-seccion {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-
-  iframe {
-    width: 100%;
-    height: 300px;
-    border: none;
-    border-radius: v.$border-radius-lg;
-  }
-
-  @media screen and (min-width: 768px) {
-    flex-direction: row;
-    align-items: flex-start;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 
     iframe {
-      flex: 1;
-      height: 450px;
+        width: 100%;
+        height: 300px;
+        border: none;
+        border-radius: v.$border-radius-lg;
+        box-shadow: v.$sombra-suave; // Agregamos la sombra para que combine con las cards
     }
 
-    .cards-preparacion {
-      flex: 1;
+    @include m.responder(tablet) {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 3rem;
+
+        iframe {
+            flex: 1;
+            height: 450px;
+        }
+
+        .cards-preparacion {
+            flex: 1;
+            // Aquí no tocamos nada porque cards-preparacion ya vive en su propio componente
+        }
     }
-  }
 }
