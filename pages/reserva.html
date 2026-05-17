@@ -3,7 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Origen - Café de Especialidad</title>
+    <!-- SEO Reserva -->
+    <title>Reserva tu Mesa | Origen Café San Telmo</title>
+    <meta
+      name="description"
+      content="Asegurá tu lugar en nuestra cafetería en San Telmo. Reservas online para desayunos, brunch y meriendas de especialidad."
+    />
+    <meta
+      name="keywords"
+      content="reservar mesa cafetería, café san telmo, brunch buenos aires, horarios origen café, cafetería avenida caseros"
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Reserva tu lugar en Origen Café" />
+    <meta
+      property="og:description"
+      content="Te esperamos en Av. Caseros 450 para vivir la experiencia Origen."
+    />
+    <meta property="og:image" content="../assets/img/cafe-formulario.jpg" />
+
+    <link rel="icon" type="image/png" href="../assets/img/favicon.png">
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -14,30 +33,48 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
   </head>
   <body>
     <header>
       <nav class="navbar navbar-expand-lg index-header-superior">
         <div class="container-fluid">
-          <a class="logo" href="#">Origen</a>
+          <!-- 1. Logo -->
+          <a class="logo" href="../index.html">Origen</a>
 
-          <button
-            class="navbar-toggler border-0 shadow-none"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
+          <!-- 2. Botón Reservar (SOLO MÓVIL) + Hamburguesa -->
+          <!-- 'd-lg-none' hace que desaparezca cuando la pantalla es grande -->
+          <div class="d-flex align-items-center ms-auto">
+            <a
+              href="./reserva.html"
+              class="boton-marron me-2 d-lg-none"
+              style="
+                text-decoration: none;
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem;
+              "
+            >
+              Reservar
+            </a>
 
+            <button
+              class="navbar-toggler border-0 shadow-none"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+
+          <!-- 3. Menú de navegación (Escritorio y Móvil) -->
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto align-items-center">
+              <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
               <li class="nav-item">
-                <a class="nav-link" href="./index.html">Inicio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./preparacion.html">Preparación</a>
+                <a class="nav-link" href="./preparacion.html"
+                  >Preparación</a
+                >
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="./carta.html">Carta</a>
@@ -45,11 +82,9 @@
               <li class="nav-item">
                 <a class="nav-link" href="./galeria.html">Galeria</a>
               </li>
+              <!-- En escritorio, la gente reserva desde acá -->
               <li class="nav-item">
-                <a class="nav-link" href="./reserva.html">Reserva</a>
-              </li>
-              <li class="nav-item">
-                <button class="boton-marron ms-lg-3">Reservar</button>
+                <a class="nav-link" href="#">Reserva</a>
               </li>
             </ul>
           </div>
@@ -69,7 +104,7 @@
       </section>
       <section class="reserva-section">
         <div class="reserva-imagen">
-          <img src="./assets/img/cafe-formulario.jpg" alt="Tazas de cafe" />
+          <img src="../assets/img/cafe-formulario.jpg" alt="Tazas de cafe" />
         </div>
         <div class="reserva-formulario">
           <form>
@@ -183,19 +218,37 @@
           <div>
             <h4 class="h4-footer">Navegacion</h4>
             <ul>
-              <li><a class="footer-link" href="#">Inicio</a></li>
-              <li><a class="footer-link" href="#">Nosotros</a></li>
-              <li><a class="footer-link" href="#">Carta</a></li>
-              <li><a class="footer-link" href="#">Galeria</a></li>
+              <li><a class="footer-link" href="../index.html">Inicio</a></li>
+              <li>
+                <a class="footer-link" href="./preparacion.html">Preparación</a>
+              </li>
+              <li><a class="footer-link" href="./carta.html">Carta</a></li>
+              <li><a class="footer-link" href="./galeria.html">Galeria</a></li>
               <li><a class="footer-link" href="#">Reserva</a></li>
             </ul>
           </div>
           <div>
             <h4 class="h4-footer">Síguenos</h4>
             <ul>
-              <li><a class="footer-link" href="#">Instagram</a></li>
-              <li><a class="footer-link" href="#">Facebook</a></li>
-              <li><a class="footer-link" href="#">TikTok</a></li>
+              <li>
+                <a
+                  class="footer-link"
+                  href="https://www.instagram.com/origencafe/"
+                  >Instagram</a
+                >
+              </li>
+              <li>
+                <a
+                  class="footer-link"
+                  href="https://www.facebook.com/origencafe/"
+                  >Facebook</a
+                >
+              </li>
+              <li>
+                <a class="footer-link" href="https://www.tiktok.com/@origencafe"
+                  >TikTok</a
+                >
+              </li>
             </ul>
           </div>
         </section>

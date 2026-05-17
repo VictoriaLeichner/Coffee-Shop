@@ -88,6 +88,8 @@ ol, ul {
   font-family: "Inter", -apple-system, sans-serif;
   cursor: pointer;
   transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
 }
 .boton-marron:hover {
   background-color: #6d4621;
@@ -103,6 +105,8 @@ ol, ul {
   font-family: "Inter", -apple-system, sans-serif;
   cursor: pointer;
   transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
 }
 .boton-blanco:hover {
   background-color: #2c1810;

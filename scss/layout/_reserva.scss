@@ -71,7 +71,7 @@
     }
 }
 
-// Sección de Ubicación (fuera del flujo del main principal o como sección extra)
+// Sección de Ubicación 
 .ubicacion {
     background-color: v.$color-fondo-claro;
     @include m.seccion-estandar;

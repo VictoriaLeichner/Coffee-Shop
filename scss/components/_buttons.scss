@@ -10,6 +10,9 @@
   cursor: pointer;
   transition: v.$transition-base;
 
+  text-decoration: none; 
+  display: inline-block;
+
   &:hover {
     background-color: #6d4621;
     transform: translateY(-2px);
@@ -25,6 +28,9 @@
   font-family: v.$font-texto;
   cursor: pointer;
   transition: v.$transition-base;
+
+  text-decoration: none; 
+  display: inline-block;
 
   &:hover {
     background-color: v.$color-oscuro;
